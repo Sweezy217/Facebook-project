@@ -1,0 +1,20 @@
+.signupCont{
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding-top: 5px; */
+}
+
+.logo{
+    width: 302.77px;
+    height: 100px;
+}
+
+.signupForm{
+    padding-top: 5px;
+    margin: 0 auto 30px auto;
+    padding: 0 20px 0 0;
+    width: 400px;
+}
