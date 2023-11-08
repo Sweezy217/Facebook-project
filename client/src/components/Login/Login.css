@@ -43,12 +43,12 @@
 .form input {
   border-radius: 5px;
   outline: none;
-  height: 25px;
+  height: 50px;
   font-size: 19px;
   border: 1px solid #e6e3e3;
   margin: 6px 16px;
   display: block;
-  width: 83%;
+  width: 91%;
   padding: 16px 16px;
 }
 
