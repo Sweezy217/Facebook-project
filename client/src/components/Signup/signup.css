@@ -1,20 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .signupCont{
-    /* text-align: center; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* padding-top: 5px; */
+    background-color: #f0f2f5;
+    height: 116vh;
 }
 
 .logo{
     width: 302.77px;
     height: 100px;
+    margin-top: 5px;
+    margin-bottom: 8.5px;
+}
+
+.signupDiv{
+    margin: 0 auto 30px auto;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.137);
+    width: 438px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.signupH1{
+    /* padding: 10px ; */
+    z-index: 1;
+    align-items: center;
+    background-color: #fff;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    font-size: 25px;
+    line-height: 32px;
+    text-align: center;
+    font-family: SFProDisplay-Bold, Helvetica, Arial, sans-serif;
+    margin-top: 9px;
+}
+
+.signupP{
+    font-size: 15px;
+    width: 100%;
+    line-height: 24px;
+    text-align: center;
+    color: #606770;
+    font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+    margin-bottom: 9px;
 }
 
 .signupForm{
-    padding-top: 5px;
-    margin: 0 auto 30px auto;
-    padding: 0 20px 0 0;
-    width: 400px;
+    border-top: 1px solid #dadde1;
+    padding: 16px;
+}
+
+.signupInputs {
+    padding: 11px;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 16px;
+    outline: none;
+    margin-top: .8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid #ccd0d5;
+}
+.signupInputs::placeholder {
+    color: #1c1e2176;
+}
+
+.signupName{
+    width: 198.9px;
+}
+
+.signupLastName{
+    width: 193px;
+    margin-left: 11.5px;
+}
+
+.signupPass{
+    width: 100%;
+}
+
+.signupPin{
+    width: 100%;
+}
+
+.signupSubTitle{
+    margin-bottom: 4px;
+    color: #606770;
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 20px;
+    margin-bottom: 4px;
+    margin-top: 6px;
+}
+
+.signupSubTitle2{
+    margin-top: 6px;
+}
+
+.signupSelect{
+    border-radius: 4px;
+    color: #1c1e21;
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    height: 36px;
+    line-height: 20px;
+    padding-right: 20px;
+    width: 125px;
+    border: none;
+    border: 1px solid #ccd0d5;
+    background-color: white;
+    outline: none;
+}
+
+.signupSelect2{
+    margin-left: 14px;
+}
+
+.signupRadioDiv{
+    display: flex;
+    justify-content: space-between;
+}
+
+.signupRadio{
+    background-color: #fff;
+    border: 1px solid #ccd0d5;
+    box-sizing: border-box;
+    display: inline-block;
+    flex: 1 0 auto;
+    font-weight: normal;
+    height: 36px;
+    margin: 0px 3px 6px;
+    padding: 0;
+    position: relative;
+    width: auto;
+    border-radius: 5px;
+}
+
+.signupRadio label{
+    box-sizing: border-box;
+    color: #1c1e21;
+    display: inline-block;
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 36px;
+    padding: 0 50px 0 10px;
+    /* width: 127px; */
+}
+
+
+.signupFooter{
+    color: #777;
+    font-size: 11px;
+    margin: 4px 0px;
+    margin-left: 4px;
+    margin-bottom: 14px;
+    line-height: 1.34;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.signupFooter a{
+    color: #1877f2;
+    text-decoration: none;
+}
+
+.signupFooter a:hover{
+    text-decoration: underline;
+}
+.signupButtonDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 19px;
+    margin-bottom: 10px;
+}
+.signupButton{
+    background: none;
+    background-color: #00a400;
+    border: none;
+    border-radius: 6px;
+    box-shadow: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    height: 36px;
+    overflow: hidden;
+    padding: 0 32px;
+    text-shadow: none;
+    min-width: 194px;
+    cursor: pointer;
+}
+
+.loginLink{
+    color: #1877f2;
+    font-family: SFProText-Semibold, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 20px;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px 0;
+    margin-bottom: 20px;
 }
