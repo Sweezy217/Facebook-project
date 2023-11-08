@@ -1,10 +1,14 @@
-import React from 'react'
-import Login from '../components/Login/Login'
+import React from "react";
+import Login from "../components/Login/Login";
+import Footer from "../components/Footer/Footer";
 
 const LoginPage = () => {
   return (
-    <div><Login/></div>
-  )
-}
+    <>
+      <Login />
+      <Footer/>
+    </>
+  );
+};
 
-export default LoginPage
+export default LoginPage;
