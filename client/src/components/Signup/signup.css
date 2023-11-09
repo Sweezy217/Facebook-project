@@ -11,6 +11,7 @@
     align-items: center;
     background-color: #f0f2f5;
     height: 116vh;
+    /* padding-bottom: 20px; */
 }
 
 .logo{
@@ -208,5 +209,9 @@
     cursor: pointer;
     text-align: center;
     margin: 10px 0;
+    text-decoration: none;
+}
+
+.loginLink p{
     margin-bottom: 20px;
 }
