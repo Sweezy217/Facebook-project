@@ -24,6 +24,11 @@
   width: 100%;
 }
 
+.form-parent form span {
+  color: red;
+  font: 13px Arial, Helvetica, sans-serif;
+}
+
 .login-parent {
   background: #f1f1f1;
   display: flex;

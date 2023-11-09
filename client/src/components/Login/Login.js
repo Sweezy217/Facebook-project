@@ -5,11 +5,21 @@ import { Link } from "react-router-dom";
 const Login = () => {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
+  const [requirements, setRequirements] = useState(false);
+  const [comrequire, setComrequire] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("working");
 
+    if (userName.includes(".com")) {
+      if (!userName.includes("@")) {
+        console.log(true);
+        setRequirements(true);
+      }
+    } else {
+      console.log("error");
+      setComrequire(true);
+    }
     // axios
     //   .post("http://localhost:8000/login", { userName, password })
     //   .then((result) => {
@@ -41,6 +51,10 @@ const Login = () => {
             autoComplete="off"
             onChange={(e) => setUserName(e.target.value)}
           />
+          <span>
+            {requirements ? "Please ensure email has the '@' sign" : ""}
+          </span>
+          <span>{comrequire ? "Please ensure email includes '.com'" : ""}</span>
           <input
             type="password"
             placeholder="Password"
