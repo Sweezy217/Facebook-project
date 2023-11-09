@@ -3,12 +3,25 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Login = () => {
-  const [name, setName] = useState("");
+  const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("working");
+
+    // axios
+    //   .post("http://localhost:8000/login", { userName, password })
+    //   .then((result) => {
+    //     if (result.data.auth) {
+    //     console.log(result.data.auth)
+    //     } else {
+    //       console.log("false")
+    //     }
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
   };
 
   return (
@@ -26,7 +39,7 @@ const Login = () => {
             type="text"
             placeholder="Email address or phone number"
             autoComplete="off"
-            onChange={(e) => setName(e.target.value)}
+            onChange={(e) => setUserName(e.target.value)}
           />
           <input
             type="password"
