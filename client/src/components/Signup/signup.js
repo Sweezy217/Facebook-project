@@ -23,7 +23,7 @@ const Signup = () => {
     console.log(userData)
 
     axios
-    .post("", { userData })
+    .post("http://localhost:8000/registrations", userData )
     .then((result) => {
       console.log(result)
       navigate('/login')
@@ -47,15 +47,15 @@ const Signup = () => {
 
             <form className='signupForm' onSubmit={handleform}>
 
-              <input type='text' className='signupInputs signupName' placeholder='First Name' onChange={(e)=>setUserData({...userData,firstName:e.target.value})}/>
-              <input type='text' className='signupInputs signupLastName' placeholder='Surname' onChange={(e)=>setUserData({...userData,surname:e.target.value})}/>
-              <input type='text' className='signupInputs signupPass' placeholder='Mobile number or email address' onChange={(e)=>setUserData({...userData,uniqueID:e.target.value})}/>
-              <input type='password' className='signupInputs signupPin' placeholder='New password' onChange={(e)=>setUserData({...userData,password:e.target.value})}/>
+              <input type='text' className='signupInputs signupName' placeholder='First Name' onChange={(e)=>setUserData({...userData,firstName:e.target.value})} required/>
+              <input type='text' className='signupInputs signupLastName' placeholder='Surname' onChange={(e)=>setUserData({...userData,surname:e.target.value})} required/>
+              <input type='text' className='signupInputs signupPass' placeholder='Mobile number or email address' onChange={(e)=>setUserData({...userData,uniqueID:e.target.value})} required/>
+              <input type='password' className='signupInputs signupPin' placeholder='New password' onChange={(e)=>setUserData({...userData,password:e.target.value})} required/>
 
               <p className='signupSubTitle signupSubTitle2'>Date of birth</p>
 
 
-              <select className="signupSelect" type='selector' onChange={(e)=>setUserData({...userData,dayOfBirth:e.target.value})}>
+              <select className="signupSelect" type='selector' onChange={(e)=>setUserData({...userData,dayOfBirth:e.target.value})} required>
                 <option value="1" >1</option>
                 <option value="2" >2</option>
                 <option value="3" >3</option>
@@ -88,7 +88,7 @@ const Signup = () => {
                 <option value="30" >30</option>
                 <option value="31" >31</option>
               </select>
-              <select className="signupSelect signupSelect2" type='selector' onChange={(e)=>setUserData({...userData,monthOfBirth:e.target.value})}>
+              <select className="signupSelect signupSelect2" type='selector' onChange={(e)=>setUserData({...userData,monthOfBirth:e.target.value})} required>
                 <option value="Jan" >Jan</option>
                 <option value="Feb" >Feb</option>
                 <option value="Mar" >Mar</option>
@@ -102,7 +102,7 @@ const Signup = () => {
                 <option value="Nov" >Nov</option>
                 <option value="Dec" >Dec</option>
               </select>
-              <select className="signupSelect signupSelect2" type='selector' onChange={(e)=>setUserData({...userData,yearOfBirth:e.target.value})}>
+              <select className="signupSelect signupSelect2" type='selector' onChange={(e)=>setUserData({...userData,yearOfBirth:e.target.value})} required>
                 <option value="2000" >2000</option>
                 <option value="2001" >2001</option>
                 <option value="2002" >2002</option>
@@ -134,17 +134,17 @@ const Signup = () => {
               <div className='signupRadioDiv'>
                 <div className='signupRadio'>
                 <label for="radio-1">Female</label>
-                <input type='radio' id='radio-1' name='radio' value="Female" onChange={(e)=>setUserData({...userData,gender:e.target.value})}/>
+                <input type='radio' id='radio-1' name='radio' value="Female" onChange={(e)=>setUserData({...userData,gender:e.target.value})} required/>
                 </div>
 
                 <div className='signupRadio'>
                 <label for="radio-2">Male</label>
-                <input type='radio' id='radio-2' name='radio' value="Male" onChange={(e)=>setUserData({...userData,gender:e.target.value})}/>
+                <input type='radio' id='radio-2' name='radio' value="Male" onChange={(e)=>setUserData({...userData,gender:e.target.value})} required/>
                 </div>
 
                 <div className='signupRadio'>
                 <label for="radio-3">Custom</label>
-                <input type='radio' id='radio-3' name='radio' value="Custom" onChange={(e)=>setUserData({...userData,gender:e.target.value})}/>
+                <input type='radio' id='radio-3' name='radio' value="Custom" onChange={(e)=>setUserData({...userData,gender:e.target.value})} required/>
                 </div>
               </div>
 
