@@ -26,7 +26,7 @@ const Signup = () => {
 
 
     axios
-      .post("http://localhost:8000/registrations", userData)
+      .post("http://localhost:3001/registrations", userData)
       .then((result) => {
         console.log(result);
         navigate("/login");

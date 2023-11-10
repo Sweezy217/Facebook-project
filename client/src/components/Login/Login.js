@@ -35,7 +35,7 @@ const Login = () => {
     // console.log(array);
 
     axios
-      .post("http://localhost:8000/login", { uniqueID, password })
+      .post("http://localhost:3001/login", { uniqueID, password })
       .then((result) => {
         setLoggedIN(false);
         if (result.data.auth) {
@@ -45,8 +45,9 @@ const Login = () => {
         }
       })
       .catch((error) => {
+        setLoggedIN(false);
         console.log(error);
-        setLoggedIN(true);
+        
       });
   };
 
