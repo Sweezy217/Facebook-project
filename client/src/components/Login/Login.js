@@ -1,27 +1,53 @@
 import "./Login.css";
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Login = () => {
-  const [userName, setUserName] = useState("");
+  const navigate = useNavigate();
+  const [uniqueID, setUniqueID] = useState("");
+  // const [users, setUsers] = useState([]);
   const [password, setPassword] = useState("");
+  const [loggedIN, setLoggedIN] = useState(false);
+  const [passwordRequire, setPasswordRequire] = useState(false);
+
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:8000/getUsers")
+  //     .then((users) => setUsers(users.data))
+  //     .catch((err) => console.log(err));
+  // }, []);
+
+  // console.log(users)
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("working");
-
-    // axios
-    //   .post("http://localhost:8000/login", { userName, password })
-    //   .then((result) => {
-    //     if (result.data.auth) {
-    //     console.log(result.data.auth)
-    //     } else {
-    //       console.log("false")
+    setLoggedIN(true);
+    setPasswordRequire(false);
+    // let array = [];
+    // if (users.length > 0) {
+    //   users.forEach((user) => {
+    //     if (user.uniqueID !== uniqueID) {
+    //       array.push(user.uniqueID);
     //     }
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
     //   });
+    // }
+    // console.log(array);
+
+    axios
+      .post("http://localhost:8000/login", { uniqueID, password })
+      .then((result) => {
+        setLoggedIN(false);
+        if (result.data.auth) {
+          console.log('user is in')
+        } else {
+          setPasswordRequire(true);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+        setLoggedIN(true);
+      });
   };
 
   return (
@@ -39,7 +65,7 @@ const Login = () => {
             type="text"
             placeholder="Email address or phone number"
             autoComplete="off"
-            onChange={(e) => setUserName(e.target.value)}
+            onChange={(e) => setUniqueID(e.target.value)}
           />
           <input
             type="password"
@@ -47,8 +73,9 @@ const Login = () => {
             autoComplete="off"
             onChange={(e) => setPassword(e.target.value)}
           />
+          <span>{passwordRequire ? "Password is Incorrect" : ""}</span>
 
-          <button>Log in</button>
+          <button>{loggedIN ? "Logging In" : "Log in"}</button>
         </form>
 
         <Link className="forgot-account" to="/forgotpassword">
