@@ -65,6 +65,6 @@ app.get("/users", (req, res) => {
 //     .catch((err) => res.json(err));
 // });
 
-app.listen(8000, () => {
+app.listen(3001, () => {
   console.log("server is running");
 });
