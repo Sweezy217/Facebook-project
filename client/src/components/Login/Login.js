@@ -38,7 +38,6 @@ const Login = () => {
       .post("http://localhost:8000/login", { uniqueID, password })
       .then((result) => {
         setLoggedIN(false);
-        console.log(result)
         if (result.data.auth) {
           console.log('user is in')
         } else {
