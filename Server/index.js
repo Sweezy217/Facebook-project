@@ -17,19 +17,24 @@ mongoose.connect(databaseUrl);
 
 
 app.post("/registrations", (req, res) => {
-    const {  password, ...rest } = req.body;
+    const { password, ...rest } = req.body;
     bcrypt
      .hash(password, 10)
      .then((hash) => {
-    userModel.create({password: hash, ...rest})
+    userModel.create({ password: hash, ...rest})
     .then((user) => res.json(user))
     .catch((err) => {
       console.log(err);
       res.status(500).json({ error: "An error occurred" });
     });
   })
-
 })
+
+app.get("/users", (req, res) => {
+  userModel.find()
+  .then(use => res.json(use))
+  .catch(err => console.log(err))
+ });
 // app.post("/login", (req, res) => {
 //   const { phoneNumber, email, password } = req.body;
 //   userModel.find({ email: email }).then((account) => {
