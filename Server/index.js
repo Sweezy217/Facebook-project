@@ -57,13 +57,7 @@ app.get("/users", (req, res) => {
   .then(use => res.json(use))
   .catch(err => console.log(err))
  });
-// app.get("/getUsers", (req, res) => {
-//   userModel.find()
-//     .then((users) => {
-//       res.json(users);
-//     })
-//     .catch((err) => res.json(err));
-// });
+
 
 app.listen(3001, () => {
   console.log("server is running");
