@@ -2,9 +2,11 @@
     margin: 0 auto;
     margin-top: 55px;
     text-align: center;
-    width: 69.5%;
-    height: 60vw;
+    /* width: 69.5%; */
+    padding: 0 206px;
+    /* height: 60vw; */
 }
+
 .profileImgCont{
     position: relative;
 }
@@ -19,7 +21,6 @@
     border-radius: 0px 0px max(0px, min(8px, ((100vw - 4px) - 100%) * 9999)) max(0px, min(8px, ((100vw - 4px) - 100%) * 9999)) / 0px 0px 8px 8px;
 }
 .profileBtn{
-    /* font-size: .9375rem; */
     font-size:15px ;
     padding: 12px;
     font-family: Arial, Helvetica, sans-serif;
@@ -102,9 +103,7 @@
 }
 
 .profileName{
-    /* border: 1px solid black; */
     padding-left: 220px;
-    /* width: 52.6vw; */
     font-size: 32px;
     color: #050505;
 }
@@ -594,4 +593,131 @@
     height: 24px;
     background-repeat: no-repeat;
     display: inline-block;
+}
+
+.ProfileNav{
+    border-top: 1px solid #65676b5d;
+    margin: 0 32px;
+    margin-top: 49px;
+    display: flex;
+}
+
+.ProfileNav button{
+    padding: 0 16px;
+    background-color: white;
+    border: none;
+    color: #65676B;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 55px;
+    font-weight: 780;
+    cursor: pointer;
+    margin: 3px 0;
+
+}
+
+.ProfileNav button:hover{
+    border-radius: 6px;
+    margin: 3px 0;
+    background-color: #F0F2F5;
+}
+
+#ProfileNavButton{
+    padding: 0 16px;
+    background-color: white;
+    border: none;
+    color: #65676B;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 55px;
+    font-weight: 780;
+    cursor: pointer;
+    margin: 3px 0;
+    text-align: center;
+    outline: hidden;
+    border: hidden;
+}
+#ProfileNavButton:hover{
+    border-radius: 6px;
+    margin: 3px 0;
+    background-color: #F0F2F5;
+}
+
+.profileSection{
+    background-color: #E4E6EB;
+    width: 100%;
+    padding: 0 239px;
+    padding-top: 16px;
+}
+
+.Info{
+    width: 360px;
+    /* height: 285px; */
+    background-color: white;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    padding-top: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 20px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.Info h1{
+    font-size: 20px;
+    color: #050505;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.Info button{
+    margin: 19px 16px 0 0 ;
+    width: 328px;
+    height: 36px;
+    border: none;
+    width: 100%;
+    border-radius: 6px;
+    color: #050505;
+    cursor: pointer;
+    background-color: #E4E6EB;
+    font-size: 15px;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Info button:hover{
+    background-color: #cdcfd3;
+}
+
+.Photos{
+    font-size: 20px;
+    color: #050505;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Friends{
+    font-size: 20px;
+    color: #050505;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+.link{
+    color: #0064D1;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    text-decoration: none;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
