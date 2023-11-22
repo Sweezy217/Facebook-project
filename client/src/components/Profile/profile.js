@@ -172,7 +172,9 @@ const Profile = () => {
                 <h1 className="popUpP">Only you can view this section</h1>
                 <div className="avater"></div>
                 <p className="avaterP">Express yourself using an avatar</p>
-                <button className="avaterBtn"><div className="faceico"></div>Create Avater</button>
+                <button className="avaterBtn">
+                  <div className="faceico"></div>Create Avater
+                </button>
 
                 <div className="popUpSub">
                   <h3>Bio</h3>
@@ -296,7 +298,10 @@ const Profile = () => {
                   <button>Add</button>
                 </div>
                 <div className="avater2"></div>
-                <p className="avaterP">Feature your favorite photos and stories here for all your friends to see.</p>
+                <p className="avaterP">
+                  Feature your favorite photos and stories here for all your
+                  friends to see.
+                </p>
 
                 <div className="popupBio"></div>
 
@@ -307,6 +312,57 @@ const Profile = () => {
             </div>
           </div>
         )}
+
+        <div className="ProfileNav">
+          <button>Posts</button>
+          <button>About</button>
+          <button>Friends</button>
+          <button>Photos</button>
+          <button>Videos</button>
+          <button>Check-ins</button>
+          <select type="selector" id="ProfileNavButton">
+            <option>More</option>
+          </select>
+        </div>
+      </div>
+
+      <div className="profileSection">
+        <div className="flex">
+          <div>
+            <div className="Info">
+              <h1>Info</h1>
+              <button>Add bio</button>
+              <button>Edit details</button>
+              <button>Add hobbies</button>
+              <button>Add featured</button>
+            </div>
+
+            <div className="Info Photos">
+              <h1>Photos</h1>
+              <a href="" className="link">
+                See all photos
+              </a>
+            </div>
+
+            <div className="Info Friends">
+              <h1>Friends</h1>
+              <a href="" className="link">
+                See all friends
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <div className="Info Photos">
+              <h1>Posts</h1>
+              <button>Edit details</button>
+              <button>Add hobbies</button>
+              <button>Add featured</button>
+            </div>
+
+          
+          </div>
+        </div>
       </div>
     </>
   );
