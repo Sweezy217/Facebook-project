@@ -353,11 +353,19 @@ const Profile = () => {
           </div>
 
           <div>
-            <div className="Info Photos">
-              <h1>Posts</h1>
-              <button>Edit details</button>
-              <button>Add hobbies</button>
-              <button>Add featured</button>
+            <div className="Info Posts">
+              <div className="Post1">
+                <h1>Posts</h1>
+                <div>
+                  <button className="postsBtn"><div id="postsIco1"></div>Filters</button>
+                  <button className="postsBtn2"><div id="postsIco2"></div>Manage Posts</button>
+                </div>
+              </div>
+              <div className="Post2">
+                  <button><div className="postBtn3"></div>List View</button>
+                  <button><div className="postBtn4"></div>Grid View</button>
+              </div>
+              
             </div>
 
           
